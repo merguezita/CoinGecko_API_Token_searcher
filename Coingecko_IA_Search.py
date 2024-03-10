@@ -74,8 +74,8 @@ def main():
             print("Volume de négociation sur 24 heures:", crypto_details['volume_24h'])
             print("Nombre de followers Twitter:", crypto_details['twitter_followers'])
             print("-" * 50)
-        time.sleep(12)  # Attendre 2 secondes entre chaque requête
-    with open('crypto_data_CoinGecko.json', 'w', encoding='utf-8') as json_file:
+        time.sleep(12)  # Attendre 12 secondes entre chaque requête pour ne dépasser le quota de l'API
+    with open('crypto_data_CoinGecko.json', 'w', encoding='utf-8') as json_file: #Nom du fichier final format .json
         json.dump(output_data, json_file, indent=4)
 
 if __name__ == "__main__":
